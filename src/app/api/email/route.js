@@ -14,7 +14,7 @@ export async function POST(request) {
       secure: true, // Use true for port 465, false for 587 (STARTTLS)
       auth: {
         user: "contact@osamarizwan.com", // Your full Hostinger email address
-        pass: "your_email_password", // Your email password
+        pass: process.env.NEXT_EMAIL_PASSWORD, // Your email password
       },
       tls: {
         // For port 587 (STARTTLS), you might need this if you have issues
