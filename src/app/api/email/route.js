@@ -9,17 +9,23 @@ export async function POST(request) {
 
     // Set up Nodemailer transporter with Mailtrap SMTP credentials
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.hostinger.com", // Hostinger SMTP server
+      port: 465, // Or 587 for STARTTLS
+      secure: true, // Use true for port 465, false for 587 (STARTTLS)
       auth: {
-        user: "osamadevmont@gmail.com",
-        pass: process.env.GMAIL_APP_PASSWORD,
+        user: "contact@osamarizwan.com", // Your full Hostinger email address
+        pass: "your_email_password", // Your email password
+      },
+      tls: {
+        // For port 587 (STARTTLS), you might need this if you have issues
+        // rejectUnauthorized: false // Use with caution, only if necessary
       },
     });
 
     // Email message options
     const mailOptions = {
-      from: `"Contact Form" <osamadevmont@gmail.com>`, // sender address
-      to: "osamadevmont@gmail.com", // your email or whoever should get the contact message
+      from: `"Contact Form" <contact@osamarizwan.com>`, // sender address
+      to: "contact@osamarizwan.com", // your email or whoever should get the contact message
       subject: "New Contact Form Submission",
       text: `You have a new message from ${name}\n\nEmail: (${email})\n\n${message}`,
     };
