@@ -53,7 +53,7 @@ const contactInfo = [
   },
 ];
 
-function CopyEmailButton({ email = "osamarizwan277@gmail.com" }) {
+function CopyEmailButton({ email = "osamadevmont@gmail.com" }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {

@@ -1,36 +1,47 @@
-// app/api/contact/route.js
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+
+export const runtime = "nodejs";
+
+const gmailUser =
+  process.env.GMAIL_USER || process.env.EMAIL_USER || "osamadevmont@gmail.com";
+const gmailAppPassword =
+  process.env.GMAIL_APP_PASSWORD ||
+  process.env.EMAIL_PASSWORD ||
+  process.env.NEXT_EMAIL_PASSWORD;
+const recipientEmail = process.env.CONTACT_EMAIL_TO || gmailUser;
 
 export async function POST(request) {
   try {
     const data = await request.json();
     const { name, email, message } = data;
 
-    // Set up Nodemailer transporter with Mailtrap SMTP credentials
+    if (
+      !gmailAppPassword ||
+      gmailAppPassword === "replace-with-your-gmail-app-password"
+    ) {
+      return NextResponse.json(
+        { message: "Email service is not configured" },
+        { status: 500 }
+      );
+    }
+
     const transporter = nodemailer.createTransport({
-      host: "smtp.hostinger.com", // Hostinger SMTP server
-      port: 465, // Or 587 for STARTTLS
-      secure: true, // Use true for port 465, false for 587 (STARTTLS)
+      service: "gmail",
       auth: {
-        user: "contact@osamarizwan.com", // Your full Hostinger email address
-        pass: process.env.NEXT_EMAIL_PASSWORD, // Your email password
-      },
-      tls: {
-        // For port 587 (STARTTLS), you might need this if you have issues
-        // rejectUnauthorized: false // Use with caution, only if necessary
+        user: gmailUser,
+        pass: gmailAppPassword,
       },
     });
 
-    // Email message options
     const mailOptions = {
-      from: `"Contact Form" <contact@osamarizwan.com>`, // sender address
-      to: "contact@osamarizwan.com", // your email or whoever should get the contact message
+      from: `"Portfolio Contact" <${gmailUser}>`,
+      to: recipientEmail,
+      replyTo: email,
       subject: "New Contact Form Submission",
-      text: `You have a new message from ${name}\n\nEmail: (${email})\n\n${message}`,
+      text: `You have a new message from ${name}\n\nEmail: ${email}\n\n${message}`,
     };
 
-    // Send the email
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json(

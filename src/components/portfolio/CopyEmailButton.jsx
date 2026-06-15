@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Copy, Check, Mail } from 'lucide-react';
 
-export default function CopyEmailButton({ email = "hello@devportfolio.com" }) {
+export default function CopyEmailButton({ email = "osamadevmont@gmail.com" }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
