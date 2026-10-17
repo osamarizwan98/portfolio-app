@@ -1,0 +1,66 @@
+export const stack = [
+  {
+    id: "shopify",
+    name: "Shopify",
+    tagline: "Apps · Themes · APIs",
+    tools: [
+      ["Liquid", "Online Store 2.0 themes and sections."],
+      ["Sections & blocks", "Reusable, metafield-driven content."],
+      ["Admin GraphQL", "Apps, bundles and discount logic."],
+      ["Storefront API", "Ajax Cart and product-page behavior."],
+      ["Remix + Polaris", "Embedded Shopify apps."],
+      ["Webhooks", "Auth, rate limits and reliable syncing."],
+    ],
+  },
+  {
+    id: "frontend",
+    name: "Frontend",
+    tagline: "UI · Performance",
+    tools: [
+      ["React", "Component-driven interfaces."],
+      ["Next.js", "App Router applications."],
+      ["TypeScript", "Typed, maintainable code."],
+      ["JavaScript", "Storefront and theme scripting."],
+      ["Tailwind CSS", "Fast, consistent styling."],
+      ["HTML & CSS", "Responsive fundamentals."],
+    ],
+  },
+  {
+    id: "backend",
+    name: "Backend",
+    tagline: "APIs · Integrations",
+    tools: [
+      ["Node.js", "APIs and services."],
+      ["Express", "REST APIs with error handling."],
+      ["GraphQL", "Clear, typed data contracts."],
+      ["Third-party APIs", "Integrations and webhooks."],
+      ["Laravel", "PHP backends with MySQL."],
+      ["PHP", "Client and legacy projects."],
+    ],
+  },
+  {
+    id: "data",
+    name: "Data",
+    tagline: "Storage",
+    tools: [
+      ["MongoDB", "Document data layers."],
+      ["PostgreSQL", "Relational data layers."],
+      ["MySQL", "Laravel-backed platforms."],
+    ],
+  },
+  {
+    id: "ai-shipping",
+    name: "AI & Shipping",
+    tagline: "Automation · Deploy",
+    tools: [
+      ["n8n", "Multi-step workflow automation."],
+      ["AI agents", "Connect tools and APIs."],
+      ["LLM integrations", "Model-powered features."],
+      ["RAG", "Answers grounded in your data."],
+      ["Docker", "Containerized deploys."],
+      ["CI/CD", "Automated pipelines."],
+      ["Vercel", "Frontend hosting."],
+      ["Git", "Everyday workflow."],
+    ],
+  },
+];
