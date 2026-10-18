@@ -38,18 +38,6 @@ export const metadata = {
   applicationName: site.name,
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
-  keywords: [
-    "Osama Rizwan",
-    "Full Stack Engineer",
-    "Shopify app developer",
-    "Shopify theme developer",
-    "Next.js developer",
-    "Remix",
-    "Node.js",
-    "n8n automation",
-    "AI agents",
-    "Karachi",
-  ],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

@@ -27,7 +27,9 @@ export function StackTabs() {
             className="stack-tab"
           >
             {group.name}
-            <span className="font-mono text-xs font-normal text-muted">{pad(group.tools.length)}</span>
+            <span aria-hidden="true" className="font-mono text-xs font-normal text-muted">
+              {pad(group.tools.length)}
+            </span>
           </button>
         ))}
       </div>

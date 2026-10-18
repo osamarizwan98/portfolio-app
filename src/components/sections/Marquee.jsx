@@ -14,11 +14,11 @@ function Words({ hidden }) {
 
 export function Marquee() {
   return (
-    <section aria-label="Technologies" className="marquee overflow-hidden border-y border-line bg-[#070b09] py-[18px] sm:py-[22px]">
+    <div aria-hidden="true" className="marquee overflow-hidden border-y border-line bg-[#070b09] py-[18px] sm:py-[22px]">
       <div className="marquee-track">
         <Words />
         <Words hidden />
       </div>
-    </section>
+    </div>
   );
 }

@@ -70,9 +70,8 @@ export function ContactForm() {
       </Field>
 
       {/* spam traps */}
-      <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
-        <label htmlFor="company">Company</label>
-        <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
+      <div aria-hidden="true" className="absolute left-[-9999px] h-px w-px overflow-hidden">
+        <input name="company" type="text" tabIndex={-1} autoComplete="off" />
       </div>
       <input ref={startedRef} type="hidden" name="startedAt" defaultValue="" />
 

@@ -11,8 +11,6 @@ export const reviews = [
   { id: "r3", quote: "Have used him several several times, always delivers great work, highly recommend!", duration: "5 days" },
   { id: "r4", quote: "Great every time I work with him!!", duration: "1 day" },
   { id: "r5", quote: "Fixed all problems efficiently", duration: "5 days" },
-  // TODO(content): source text is truncated; complete it from Fiverr
-  { id: "r6", quote: "Always great to work with Osama, he is awesome at fixing any issues…", duration: "2 days" },
   { id: "r7", quote: "the best thanks", duration: "3 days" },
 ];
 

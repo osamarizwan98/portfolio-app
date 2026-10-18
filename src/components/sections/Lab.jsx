@@ -27,8 +27,8 @@ export function Lab() {
               rel="noopener noreferrer"
               className="lab-row grid grid-cols-[48px_1fr_24px] items-center gap-x-4 gap-y-1 border-t border-line py-5 sm:grid-cols-[56px_2fr_1fr_40px] sm:gap-x-8 sm:py-6"
             >
-              <span className="mono text-accent">{row.year}</span>
-              <span className="display text-[20px] leading-tight sm:text-[26px]">{row.name}</span>
+              <span className="mono text-accent">{row.year}</span>{" "}
+              <span className="display text-[20px] leading-tight sm:text-[26px]">{row.name}</span>{" "}
               <span className="mono col-start-2 row-start-2 sm:col-auto sm:row-auto">{row.lang}</span>
               <span className="arrow mono col-start-3 row-span-2 row-start-1 text-accent sm:col-auto sm:row-auto" aria-hidden="true">
                 ↗

@@ -1,5 +1,7 @@
-export const experienceIntro =
-  "Devmont Digital, Karachi. Feb 2020 to Oct 2026 (6 years 8 months), plus freelance work on Fiverr and Upwork since 2023.";
+// TODO(content): owner to confirm "Oct 2026" vs "Present"; the duration below depends on it too.
+const CURRENT_ROLE_END = "Oct 2026";
+
+export const experienceIntro = `Devmont Digital, Karachi. Feb 2020 to ${CURRENT_ROLE_END} (6 years 8 months), plus freelance work on Fiverr and Upwork since 2023.`;
 
 export const education = [
   "Aptech Pakistan · ACCP, Computer Software Engineering · 2018 to 2020 · A+",
@@ -8,7 +10,7 @@ export const education = [
 
 export const roles = [
   {
-    period: "Jan 2026 — Oct 2026", // TODO(content): confirm Oct 2026 vs Present
+    period: `Jan 2026 — ${CURRENT_ROLE_END}`,
     company: "Devmont Digital",
     title: "Full Stack Engineer",
     year: "2026",

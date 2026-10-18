@@ -4,9 +4,9 @@ export const site = {
   role: "Full Stack Engineer",
   email: "osamadevmont@gmail.com",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.osamarizwan.com",
-  title: "Osama Rizwan · Full Stack Engineer · Shopify Apps & AI Automation",
+  title: "Osama Rizwan · Full Stack Engineer · Shopify Apps",
   description:
-    "Full Stack Engineer with 6+ years in e-commerce. Shopify apps and themes, Next.js, Remix and Node products, plus n8n workflows and AI agents. Based in Karachi, open to full-time and contract work.",
+    "Full Stack Engineer with 6+ years in e-commerce. Shopify apps and themes, Next.js, Node, n8n and AI automation. Karachi, open to remote work.",
   resume: "/Osama-Rizwan-CV.pdf",
   links: {
     linkedin: "https://www.linkedin.com/in/osama-rizwan/",

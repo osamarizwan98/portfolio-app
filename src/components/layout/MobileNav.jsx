@@ -52,14 +52,16 @@ export function MobileNav() {
               className="menu-item display flex items-center justify-between border-t border-line py-5 text-[40px] leading-none tracking-[-0.03em] transition-colors hover:text-accent"
             >
               {item.label}
-              <span className="mono text-accent">0{i + 1}</span>
+              <span aria-hidden="true" className="mono text-accent">
+                0{i + 1}
+              </span>
             </a>
           ))}
         </nav>
 
         <div className="wrap pb-10">
-          <a href={`mailto:${site.email}`} className="btn btn-primary w-full">
-            {site.email}
+          <a href="#contact" onClick={close} className="btn btn-primary w-full">
+            Hire me
           </a>
         </div>
       </dialog>

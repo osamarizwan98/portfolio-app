@@ -39,9 +39,11 @@ export function ServicesConsole({ items, panels }) {
             onKeyDown={onKeyDown}
             className="svc-row"
           >
-            <span className="mono flex-none">0{i + 1}</span>
+            <span aria-hidden="true" className="mono flex-none">
+              0{i + 1}
+            </span>
             <span className="min-w-0 flex-1">
-              <span className="svc-title">{item.name}</span>
+              <span className="svc-title">{item.name}</span>{" "}
               <span className="mono mt-2 block">{item.sub}</span>
             </span>
             <span className="svc-arrow" aria-hidden="true">

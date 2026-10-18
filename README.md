@@ -45,7 +45,12 @@ All copy lives in `src/content/*.js`; components contain no hard-coded text.
 | `stack.js` | Stack tabs |
 | `reviews.js` | Rating card, reviews (verbatim), marquee fragments |
 
-Still to add: `public/Osama-Rizwan-CV.pdf` (the "Download résumé" button appears automatically), real SmartBundle screenshots, the end date of the current role, and the full text of the truncated Fiverr review (`reviews.js`, `r6`).
+Still to add:
+
+- Drop the CV at `public/Osama-Rizwan-CV.pdf` (the "Download résumé" button then replaces "Get in touch" on the next build).
+- Real SmartBundle screenshots in `public/work/smartbundle/` (the widget is currently labelled "Illustration").
+- Confirm the current role's end date: edit `CURRENT_ROLE_END` in `src/content/experience.js` (and the total duration in `experienceIntro`).
+- Re-add the sawyergaffney review once the full text is copied from Fiverr.
 
 ## Structure
 

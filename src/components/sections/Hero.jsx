@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { Fragment } from "react";
 import { hero, site } from "@/content/site";
 import { ArrowRight } from "@/components/ui/icons";
 import { HeroScene } from "./HeroScene";
@@ -28,11 +29,14 @@ export function Hero() {
 
         <h1 className="display m-0 text-[clamp(2.75rem,1.2rem+5.2vw,4.875rem)] leading-[0.98] tracking-[-0.035em]">
           {lines.map((line, i) => (
-            <span key={i} className="line-mask">
-              <span className="rise block" style={{ "--delay": `${0.1 + i * 0.1}s` }}>
-                {line}
+            <Fragment key={i}>
+              {i > 0 && " "}
+              <span className="line-mask">
+                <span className="rise block" style={{ "--delay": `${0.1 + i * 0.1}s` }}>
+                  {line}
+                </span>
               </span>
-            </span>
+            </Fragment>
           ))}
         </h1>
 
