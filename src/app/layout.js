@@ -3,6 +3,7 @@ import { site } from "@/content/site";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/next';
 
 // Variable font with the optical-size axis: display sizes get the tighter cut, as in the design.
 const bricolage = Bricolage_Grotesque({
@@ -94,6 +95,7 @@ export default function RootLayout({ children }) {
           <main id="main">{children}</main>
           <SiteFooter />
         </div>
+         <Analytics />
       </body>
     </html>
   );
